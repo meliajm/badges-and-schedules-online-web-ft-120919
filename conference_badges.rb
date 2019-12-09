@@ -5,6 +5,7 @@ def badge_maker(name)
   "Hello, my name is #{name}."
 end 
 
+
 def batch_badge_creator(attendees)
   array_badge_messages = []
   attendees.each do |name|
@@ -14,6 +15,8 @@ def batch_badge_creator(attendees)
   
 end
 
+
+
 def assign_rooms(attendees)
   room_assignment_greeting_array = []
   attendees.each_with_index do |name, index|
@@ -22,6 +25,8 @@ def assign_rooms(attendees)
   room_assignment_greeting_array
   # binding.pry
 end
+
+
 
 def printer(attendees)
   attendees.each do |name|
@@ -33,5 +38,15 @@ def printer(attendees)
   end
 end 
 
+
+def printer(attendees)
+  batch_badge_creator(attendees).each do |badge|
+    puts badge
+  end
+
+  assign_rooms(attendees).each do |assignment|
+    puts assignment
+  end
+end
 
 
