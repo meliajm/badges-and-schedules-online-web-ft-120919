@@ -5,6 +5,7 @@ def badge_maker(name)
   "Hello, my name is #{name}."
 end 
 
+
 def batch_badge_creator(attendees)
   array_badge_messages = []
   attendees.each do |name|
@@ -12,6 +13,12 @@ def batch_badge_creator(attendees)
   end
   array_badge_messages
   
+end
+
+def batch_badge_creator(attendees)
+  attendees.map do |attendee|
+    "Hello, my name is #{attendee}."
+  end
 end
 
 def assign_rooms(attendees)
@@ -34,15 +41,9 @@ def printer(attendees)
 end 
 
 
-def badge_maker(name)
-  "Hello, my name is #{name}."
-end
 
-def batch_badge_creator(attendees)
-  attendees.map do |attendee|
-    "Hello, my name is #{attendee}."
-  end
-end
+
+
 
 def assign_rooms(attendees)
   attendees.each_with_index.map do |attendee, index|
